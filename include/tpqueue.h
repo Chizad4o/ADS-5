@@ -9,19 +9,20 @@ struct ITEM {
 T data;
 ITEM * next;
 };
-private:
-ITEM * create(const T &data) {
-ITEM * item = new ITEM;
-item->data = data;
-item->next = nullptr;
-return item;
-}
+  
+ private:
+ ITEM * create(const T &data) {
+ ITEM * item = new ITEM;
+ item->data = data;
+ item->next = nullptr;
+ return item;
+ }
 
 ITEM * head;
 ITEM * tail;
 
-public:
-TPQueue(): head(nullptr), tail(nullptr) {}
+ public:
+ TPQueue(): head(nullptr), tail(nullptr) {}
 
 ~TPQueue() {
 while (head)
